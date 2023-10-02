@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <section class="card-list">
+
+        <article class="card">
+            <header class="card-header">
+                <h2>Never forget</h2>
+            </header>
+
+            <div class="tags">
+                <a href="jogo1/jogo1.php">Jogar One-Hundred</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <header class="card-header">
+                <h2>Never forget</h2>
+            </header>
+
+            <div class="tags">
+                <a href="jogo2/jogo2.php">Jogar Ìmpar ou Par</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <header class="card-header">
+                <h2>Never forget</h2>
+            </header>
+
+            <div class="tags">
+                <a href="jogo3/jogo3.php">Jogar Jaken</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <header class="card-header">
+                <h2>Never forget</h2>
+            </header>
+
+            <div class="tags">
+                <a href="jogo4/jogo4.html">Jogar Terni Lapilli²</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <header class="card-header">
+                <h2>Never forget</h2>
+            </header>
+
+            <div class="tags">
+                <a href="#">Jogar</a>
+            </div>
+        </article>
+
+    </section>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: flex;
+        background-color: #17141d;
+        color: white;
+        font-family: 'DM Mono', monospace;
+        overflow: hidden;
+    }
+
+    .card-list {
+        display: flex;
+        padding: 3rem;
+        overflow-x: scroll;
+    }
+
+
+    .card-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 80vh;
+        width: 40vw;
+        min-width: 250px;
+        padding: 1.5rem;
+        border-radius: 16px;
+
+        transition: .2s;
+    }
+
+    .card:nth-child(1) {
+        background: #ffae00;
+    }
+
+    .card:nth-child(2) {
+        background: #bc0000;
+
+    }
+
+    .card:nth-child(3) {
+        background: #233f8b;
+    }
+
+    .card:nth-child(4) {
+        background: #430172;
+    }
+
+    .card:nth-child(5) {
+        background-image: linear-gradient(to top, #ffae00, purple);    
+    }
+
+    .card:hover {
+        transform: translateY(-1rem);
+    }
+
+    .card:hover~.card {
+        transform: translateX(130px);
+    }
+
+    .card:not(:first-child) {
+        margin-left: -130px;
+    }
+
+    .card-author {
+        position: relative;
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        align-items: center;
+        margin: 3rem 0 0;
+    }
+
+    .author-avatar img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        filter: grayscale(100%);
+        margin: 16px 10px;
+    }
+
+    .half-circle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 48px;
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 8;
+        stroke-linecap: round;
+    }
+
+    .card-header {
+        display: flex;
+        margin-bottom: auto;
+    }
+
+    .card-header p {
+        font-size: 14px;
+        margin: 0 0 1rem;
+        color: #7a7a8c;
+    }
+
+    .card-header h2 {
+        font-size: 20px;
+        margin: .25rem 0 auto;
+        cursor: pointer;
+    }
+
+    .card-header h2:hover {
+        background: #232323;
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .tags {
+        display: flex;
+        padding: .5rem 0 1rem;
+        line-height: 3;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tags a {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border: 3px solid #fff;
+        border-radius: 2rem;
+        padding: .1rem 2rem .1rem;
+        position: relative;
+    }
+
+    .tags a:hover {
+        background: #232323;
+        text-shadow: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-box-decoration-break: clone;
+        background-clip: text;
+        border-color: white;
+    }
+</style>
+
+</html>
